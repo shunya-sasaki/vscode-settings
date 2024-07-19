@@ -1,0 +1,127 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Resize Pane keybindings ------------------------------------------------
+    {
+        "key": "alt+shift+k",
+        "command": "workbench.action.terminal.resizePaneUp",
+    },
+    {
+        "key": "alt+shift+j",
+        "command": "workbench.action.terminal.resizePaneDown",
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+        "when": "editorFocus && !suggestWidgetVisible && !editorHoverFocused"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+        "when": "editorFocus && !suggestWidgetVisible && !editorHoverFocused"
+    },
+    // Navigate to the next item in the quick open list
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpenNavigateNext",
+        "when": "inQuickOpen && !editorHoverVisible"
+    },
+    // Navigate to the previous item in the quick open list
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpenNavigatePrevious",
+        "when": "inQuickOpen && !editorHoverVisible"
+    },
+    // Invalidate the default keybinding for creating a new file
+    {
+        "key": "ctrl+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    // Hover keybindings ------------------------------------------------------
+    {
+        "key": "Enter",
+        "command": "editor.action.showHover",
+        "when": "editorHoverVisible"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.scrollDownHover",
+        "when": "editorHoverFocused"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.scrollUpHover",
+        "when": "editorHoverFocused"
+    },
+    // Seach widget keybindings -----------------------------------------------
+    {
+        "key": "Enter",
+        "command": "search.action.focusSearchList",
+        "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "search.action.focusSearchList",
+        "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "search.action.focusSearchList",
+        "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
+    },
+    {
+        "key": "Escape",
+        "command": "workbench.action.closeSidebar",
+        "when": "activeViewlet == 'workbench.view.search' && inputFocus && !editorFocus"
+    },
+    {
+        "key": "Escape",
+        "command": "search.action.refreshSearchResults",
+        "when": "listFocus && activeViewlet == 'workbench.view.search'"
+    },
+    // Editor <-> Terminal keybindings ----------------------------------------
+    {
+        "key": "alt+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    // Window tab keybindings -------------------------------------------------
+    // Change to the next window tab
+    {
+        "key": "ctrl+shift+n",
+        "command": "workbench.action.showNextWindowTab",
+        "when": "editorFocus && isMac"
+    },
+    // Change to the previous window tab
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.showPreviousWindowTab",
+        "when": "editorFocus && isMac"
+    },
+    // Invalidate the default keybinding for moving the cursor down
+    {
+        "key": "ctrl+n",
+        "command": "-cursorDown",
+        "when": "isMac"
+    },
+    // Invalidate the default keybinding for moving the cursor up
+    {
+        "key": "ctrl+p",
+        "command": "-cursorUp",
+        "when": "isMac"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "isWindows & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "isMac & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    }
+]

@@ -1,0 +1,47 @@
+{
+	// Place your snippets for toml here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"initialize pyproject.toml": {
+		"prefix": "pyproject",
+		"body": [
+			"[build-system]",
+			"requires = ['setuptools', 'setuptools_scm', 'wheel']",
+			"build-backend = 'setuptools.build_meta'",
+			"",
+			"[project]",
+			"name=\"$1\"",
+			"dependencies = []",
+			"dynamic = ['version']",
+			"",
+			"[tool.setuptools_scm]",
+			"write_to = \"src/$1/_version.py\"",
+			"",
+			"[tool.setuptools.dynamic]",
+			"version = {attr=\"$1._version.version\"}",
+			"",
+			"[tool.isort]",
+			"force_single_line = true",
+			"",
+			"[tool.mypy]",
+			"ignore_missing_imports = true",
+			"",
+			"[tool.black]",
+			"line-length = 79",
+			"",
+			"[tool.ruff]",
+			"line-length = 79",
+			""
+		]
+	}
+}
