@@ -78,6 +78,31 @@
         "command": "search.action.refreshSearchResults",
         "when": "listFocus && activeViewlet == 'workbench.view.search'"
     },
+    // Explorer ---------------------------------------------------------------
+    // create a new file in explorer
+    {
+        "key": "shift+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    // create a new folder in explorer
+    {
+        "key": "shift+k",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+
+    },
+    // Source controll system -------------------------------------------------
     // Editor <-> Terminal keybindings ----------------------------------------
     {
         "key": "alt+j",
@@ -128,5 +153,10 @@
         "key": "cmd+i",
         "command": "-markdown.extension.editing.toggleItalic",
         "when": "isMac & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-workbench.action.switchWindow",
+        "when": "isMac"
     }
 ]
