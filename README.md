@@ -10,8 +10,16 @@ In this project, I will store my VS Code settings.
 
 ### MacOSX
 
-```zsh
+```sh
 cd ~/Library/Application\ Support/Code/User
+git init
+git pull https://github.com/shunya-sasaki/vscode-settings.git
+```
+
+### Windows
+
+```ps1
+cd $Env:APPDATA\User
 git init
 git pull https://github.com/shunya-sasaki/vscode-settings.git
 ```
