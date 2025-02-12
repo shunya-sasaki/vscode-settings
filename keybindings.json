@@ -100,9 +100,23 @@
         "key": "shift+r",
         "command": "renameFile",
         "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-
     },
     // Source controll system -------------------------------------------------
+    {
+        "key": "Space",
+        "command": "git.stage",
+        "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
+    },
+    {
+        "key": "u",
+        "command": "git.unstage",
+        "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.scm.resetViewLocation",
+        "when": "workbench.scm.visible && sideBarFocus"
+    },
     // Editor <-> Terminal keybindings ----------------------------------------
     {
         "key": "alt+j",
@@ -148,6 +162,16 @@
         "key": "cmd+b",
         "command": "-markdown.extension.editing.toggleBold",
         "when": "isMac & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-mdx.toggleEmphasis",
+        "when": "isMac && editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-mdx.toggleStrong",
+        "when": "isMac && editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
     },
     {
         "key": "cmd+i",
