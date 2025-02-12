@@ -13,11 +13,13 @@
 	// 	"description": "Log output to console"
 	// }
 	"MIT license": {
+		"scope": "plaintext",
 		"prefix": "mit",
+		"description": "MIT License",
 		"body": [
 			"MIT License",
 			"",
-			"Copyright (c) 2024 Shunya Sasaki",
+			"Copyright (c) 2025 Shunya Sasaki",
 			"",
 			"Permission is hereby granted, free of charge, to any person obtaining a copy",
 			"of this software and associated documentation files (the \"Software\"), to deal",
