@@ -9,8 +9,15 @@
     "editor.fontFamily": "PlemolJP,  Menlo, Monaco, 'Courier New', monospace",
     "editor.suggestSelection": "first",
     "editor.inlineSuggest.enabled": true,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "files.associations": {
+        "*.css.jinja": "css",
+        "*.mdx": "markdown"
+    },
     "window.nativeTabs": true,
-    "git.autofetch": true,
     "vsicons.dontShowNewVersionMessage": true,
     "terminal.integrated.env.windows": {
         "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
@@ -23,7 +30,37 @@
     },
     "terminal.integrated.shellIntegration.enabled": true,
     "explorer.sortOrder": "type",
+    // Git --------------------------------------------------------------------
+    "git.autofetch": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "gitlens.graph.layout": "editor",
+    "gitlens.hovers.avatars": false,
+    "gitlens.blame.avatars": false,
+    "gitlens.graph.avatars": false,
     // Markdown
+    "markdown.marp.themes": [
+        "./assets/css/custom.css",
+        "./assets/css/custom-a4.css"
+    ],
+    "markdown.marp.html": "default",
+    "interactiveWindow.executeWithShiftEnter": true,
+    "markdown.marp.breaks": "off",
+    "markdown.marp.exportType": "html",
+    "markdown.marp.pdf.outlines": "headings",
+    "markdown-mermaid.darkModeTheme": "dark",
+    "markdown-mermaid.lightModeTheme": "default",
+    "markdownlint.config": {
+        "MD024": false,
+        "MD033": false,
+        "MD040": false,
+        "MD048": false
+    },
+    "markdown.extension.toc.levels": "2..3",
     "myst.preview.extensions": [
         "dollarmath",
         "amsmath",
@@ -64,6 +101,25 @@
             "commands": [
                 "workbench.action.findInFiles",
             ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ],
+            "commands": [
+                "workbench.view.scm",
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ],
+            "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
         }
     ],
     "vim.handleKeys": {
@@ -109,11 +165,16 @@
     },
     "cmake.installPrefix": "${workspaceFolder}/install",
     "cmake.configureOnOpen": true,
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
     // python -----------------------------------------------------------------
     "python.terminal.activateEnvInCurrentTerminal": true,
     "python.defaultInterpreterPath": "",
     "python.languageServer": "Pylance",
     "python.venvPath": "~/.venv, ./",
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "jupyter.runStartupCommands": [
         "%load ext autoreload\nautoreload 2"
     ],
@@ -128,6 +189,7 @@
     "emmet.includeLanguages": {
         "django-html": "html"
     },
+    "typescript.preferences.importModuleSpecifier": "non-relative",
     // file types =============================================================
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -168,27 +230,19 @@
     },
     "[python]": {
         "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "ms-python.black-formatter",
     },
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-docker"
     },
-    "markdown.marp.themes": [
-        "./assets/css/custom.css",
-        "./assets/css/custom-a4.css"
-    ],
-    "markdown.marp.enableHtml": true,
-    "github.copilot.editor.enableAutoCompletions": true,
-    "interactiveWindow.executeWithShiftEnter": true,
-    "markdown.marp.breaks": "off",
-    "markdown.marp.exportType": "html",
-    "markdown.marp.pdf.outlines": "headings",
-    "markdown.extension.toc.levels": "2..3",
-    "markdown.extension.toc.orderedList": true,
-    "markdown-mermaid.darkModeTheme": "base",
-    "markdown-mermaid.lightModeTheme": "base",
-    "markdownlint.config": {
-        "MD024": false,
-        "MD033": false
+    "[cmake]": {},
+    "[mdx]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[dockerfile]": {
+        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+    },
+    "[snippets]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
 }
