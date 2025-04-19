@@ -1,4 +1,5 @@
 {
+	// Flow chart -------------------------------------------------------------
 	"Mermaid Flowchart Block": {
 		"prefix": "mmd-flowchart",
 		"scope": "markdown, mdx, javascript, typescript",
@@ -321,5 +322,134 @@
 		"scope": "markdown, mdx, javascript, typescript",
 		"description": "Image shape",
 		"body": "${1:var}@{img: \"\", label: \"\", pos \"${2|t,b|}\", w: ${3: width}, h: ${4: height}, constraint: \"${5|on,off|}\"}"
+	},
+	// Sequence Diagram -------------------------------------------------------
+	"Mermaid Sequence Diagrams Block": {
+		"prefix": "mmd-sequence",
+		"scope": "markdown, mdx, javascript, typescript",
+		"body": [
+			"```mermaid",
+			"sequenceDiagram",
+			"```"
+		],
+	},
+	"Mermaid Sequence Participant": {
+		"prefix": "mmd-sequence-participant",
+		"scope": "markdown, mdx, javascript, typescript",
+		"body": "participant ${1: var} as ${2: name}"
+	},
+	"Mermaid Sequence Actor": {
+		"prefix": "mmd-sequence-group",
+		"scope": "markdown, mdx, javascript, typescript",
+		"body": [
+			"box ${1: group_name}",
+			"",
+			"end"
+		]
+	},
+	"Mermaid Sequence Create": {
+		"prefix": "mmd-sequence-create-participant",
+		"scope": "markdown, mdx, javascript, typescript",
+		"body": "create ${1|participant,actor|} ${2: var} as ${3: name}"
+	},
+	"Mermaid Sequence Destroy": {
+		"prefix": "mmd-sequence-create-participant",
+		"scope": "markdown, mdx, javascript, typescript",
+		"body": "create ${1: var}"
+	},
+	"Mermaid Sequence Group": {
+		"prefix": "mmd-sequence-create-participant",
+		"scope": "markdown, mdx, javascript, typescript",
+		"body": "create ${1: var}"
+	},
+	"Mermaid Sequence Message": {
+		"prefix": "mmd-sequence-message",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Sequence message",
+		"body": "${1:actor} ${2|->,-->,->>,-->>,<<->>,<<-->>,-x,--x,-),--)|}: ${3:message}"
+	},
+	"Mermaid Sequence Activate": {
+		"prefix": "mmd-sequence-activate",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Activate a pariticipant or an actor",
+		"body": "activate ${1: var}"
+	},
+	"Mermaid Sequence Deactivate": {
+		"prefix": "mmd-sequence-deactivate",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Deactivate a pariticipant or an actor",
+		"body": "deactivate ${1: var}"
+	},
+	"Mermaid Sequence Note": {
+		"prefix": "mmd-sequence-note",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Add a note to a sequence diagram",
+		"body": "Note ${1|right of,left of,over|} ${2: var}: ${3: text}"
+	},
+	"Mermaid Sequence Loop": {
+		"prefix": "mmd-sequence-loop",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Add a loop block to a sequence diagram",
+		"body": [
+			"loop ${1: block_name}",
+			"",
+			"end"
+		]
+	},
+	"Mermaid Sequence Alt": {
+		"prefix": "mmd-sequence-alt",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Add a alt block to a sequence diagram",
+		"body": [
+			"alt ${1: block_name}",
+			"",
+			"else ${2: else block_name}",
+			"",
+			"end"
+		]
+	},
+	"Mermaid Sequence Parallel": {
+		"prefix": "mmd-sequence-parllel",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Add a parallel block to a sequence diagram",
+		"body": [
+			"par ${1: block_name}",
+			"",
+			"and ${2: else block_name}",
+			"",
+			"end"
+		]
+	},
+	"Mermaid Sequence Critical": {
+		"prefix": "mmd-sequence-parllel",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Add a critical block to a sequence diagram",
+		"body": [
+			"critical ${1: block_name}",
+			"",
+			"option ${2: else block_name}",
+			"",
+			"end"
+		]
+	},
+	"Mermaid Sequence Break": {
+		"prefix": "mmd-sequence-parllel",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Add a break block to a sequence diagram",
+		"body": [
+			"break ${1: block_name}",
+			"",
+			"end"
+		]
+	},
+	"Mermaid Sequence Background Highlighting": {
+		"prefix": "mmd-sequence-parllel",
+		"scope": "markdown, mdx, javascript, typescript",
+		"description": "Hightlight flows by providing colored background rect",
+		"body": [
+			"rect ${1: color}",
+			"",
+			"end"
+		]
 	},
 }
