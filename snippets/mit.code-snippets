@@ -14,7 +14,7 @@
 	// }
 	"MIT license": {
 		"scope": "plaintext",
-		"prefix": "mit",
+		"prefix": "licence-mit",
 		"description": "MIT License",
 		"body": [
 			"MIT License",
