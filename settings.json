@@ -1,248 +1,247 @@
 {
-    // System settings ========================================================
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook"
+  // System settings ========================================================
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "workbench.colorTheme": "Monokai",
+  "workbench.preferredDarkColorTheme": "Monokai",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "PlemolJP, 'PlemolJP Console NF', Menlo, Monaco, 'Courier New', monospace",
+  "editor.suggestSelection": "first",
+  "editor.inlineSuggest.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "files.associations": {
+    "*.css.jinja": "css",
+    "*.mdx": "markdown",
+    "*.code-snippets": "jsonc"
+  },
+  "window.nativeTabs": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "terminal.integrated.env.windows": {
+    "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
+  },
+  "terminal.integrated.env.osx": {
+    "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
+  },
+  "terminal.integrated.env.linux": {
+    "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
+  },
+  "terminal.integrated.shellIntegration.enabled": true,
+  "explorer.sortOrder": "type",
+  "chat.mcp.serverSampling": {
+    "Global in Code: notion": {
+      "allowedModels": [
+        "github.copilot-chat/gpt-4.1",
+        "github.copilot-chat/claude-3.5-sonnet",
+        "github.copilot-chat/claude-3.7-sonnet",
+        "github.copilot-chat/claude-3.7-sonnet-thought",
+        "github.copilot-chat/claude-sonnet-4",
+        "github.copilot-chat/gemini-2.0-flash-001",
+        "github.copilot-chat/gemini-2.5-pro",
+        "github.copilot-chat/gpt-4o",
+        "github.copilot-chat/o1",
+        "github.copilot-chat/o3-mini",
+        "github.copilot-chat/o4-mini"
+      ]
+    }
+  },
+  // Git --------------------------------------------------------------------
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "gitlens.graph.layout": "editor",
+  "gitlens.hovers.avatars": false,
+  "gitlens.blame.avatars": false,
+  "gitlens.graph.avatars": false,
+  // Markdown
+  "markdown.marp.themes": [
+    "./assets/css/custom.css",
+    "./assets/css/custom-a4.css"
+  ],
+  "markdown.marp.html": "default",
+  "interactiveWindow.executeWithShiftEnter": true,
+  "markdown.marp.breaks": "off",
+  "markdown.marp.exportType": "html",
+  "markdown.marp.pdf.outlines": "headings",
+  "markdown-mermaid.darkModeTheme": "dark",
+  "markdown-mermaid.lightModeTheme": "default",
+  "markdownlint.config": {
+    "MD024": false,
+    "MD033": false,
+    "MD040": false,
+    "MD048": false
+  },
+  "markdown.extension.toc.levels": "2..3",
+  "myst.preview.extensions": [
+    "dollarmath",
+    "amsmath",
+    "colon_fence",
+    "deflist",
+    "tasklist"
+  ],
+  // vim --------------------------------------------------------------------
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.visualstar": true,
+  "vim.easymotionKeys": "hklyuiopnm,qwertzxcvbasdgjf;",
+  "vim.leader": "<space>",
+  "vim.timeout": 1200,
+  "vim.sneak": false,
+  "vim.statusBarColorControl": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
     },
-    "workbench.colorTheme": "Monokai",
-    "workbench.preferredDarkColorTheme": "Monokai",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.fontFamily": "PlemolJP,  Menlo, Monaco, 'Courier New', monospace",
-    "editor.suggestSelection": "first",
-    "editor.inlineSuggest.enabled": true,
+    {
+      "before": ["<leader>", "f", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    {
+      "before": ["<leader>", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-n>": false,
+    "<C-b>": false
+  },
+  // C/C++ ------------------------------------------------------------------
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}",
+    "${workspaceFolder}/include",
+    "/opt/homebrew/include",
+    "${env:HOME}/.venv/py311/lib/python3.11/site-packages/torch/include/torch/csrc/api/include"
+  ],
+  "C_Cpp.default.compilerPath": "/usr/bin/clang++",
+  "C_Cpp.default.cStandard": "c17",
+  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.intelliSenseMode": "macos-clang-arm64",
+  "C_Cpp.clang_format_sortIncludes": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "doxdocgen.file.customTag": ["@details"],
+  "doxdocgen.file.fileOrder": ["file", "brief", "custom"],
+  "doxdocgen.generic.authorEmail": "shunya.sasaki1120@gmail.com",
+  "doxdocgen.generic.authorName": "Shunya Sasaki",
+  "cmake.cmakePath": "/opt/homebrew/bin/cmake",
+  "cmake.generator": "Ninja",
+  "cmake.configureSettings": {
+    "CMAKE_CXX_STANDARD": "20",
+    "CMAKE_MAKE_PROGRAM": "/opt/homebrew/bin/ninja"
+  },
+  "cmake.buildEnvironment": {
+    "CMAKE_PREFIX_PATH": "${env:HOME}/.opt/libtorch/share/cmake/Torch:$CMAKE_PREFIX_PATH",
+    "Torch_DIR": "${env:HOME}/.opt/libtorch/share/cmake/Torch",
+    "CMAKE_CXX_STANDARD": "20"
+  },
+  "cmake.environment": {
+    "CMAKE_CXX_STANDARD": "20",
+    "CMAKE_CXX_SCAN_FOR_MODULES": "ON",
+    "CMAKE_PREFIX_PATH": "${env:HOME}/.venv/py311/lib/python3.11/site-packages/torch/share/cmake:$CMAKE_PREFIX_PATH",
+    "Torch_DIR": "${env:HOME}/.venv/py311/lib/python3.11/site-packages/torch/share/cmake/Torch"
+  },
+  "cmake.installPrefix": "${workspaceFolder}/install",
+  "cmake.configureOnOpen": true,
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  // python -----------------------------------------------------------------
+  "python.terminal.activateEnvInCurrentTerminal": true,
+  "python.defaultInterpreterPath": "",
+  "python.languageServer": "Pylance",
+  "python.venvPath": "~/.venv, ./",
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "jupyter.runStartupCommands": ["%load ext autoreload\nautoreload 2"],
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "emmet.includeLanguages": {
+    "django-html": "html"
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  // file types =============================================================
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-        "source.organizeImports": "explicit"
-    },
-    "files.associations": {
-        "*.css.jinja": "css",
-        "*.mdx": "markdown"
-    },
-    "window.nativeTabs": true,
-    "vsicons.dontShowNewVersionMessage": true,
-    "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
-    },
-    "terminal.integrated.env.osx": {
-        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
-    },
-    "terminal.integrated.env.linux": {
-        "PYTHONPATH": "${workspaceFolder}/src:${workspaceFolder}"
-    },
-    "terminal.integrated.shellIntegration.enabled": true,
-    "explorer.sortOrder": "type",
-    // Git --------------------------------------------------------------------
-    "git.autofetch": true,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": true,
-        "scminput": false
-    },
-    "gitlens.graph.layout": "editor",
-    "gitlens.hovers.avatars": false,
-    "gitlens.blame.avatars": false,
-    "gitlens.graph.avatars": false,
-    // Markdown
-    "markdown.marp.themes": [
-        "./assets/css/custom.css",
-        "./assets/css/custom-a4.css"
-    ],
-    "markdown.marp.html": "default",
-    "interactiveWindow.executeWithShiftEnter": true,
-    "markdown.marp.breaks": "off",
-    "markdown.marp.exportType": "html",
-    "markdown.marp.pdf.outlines": "headings",
-    "markdown-mermaid.darkModeTheme": "dark",
-    "markdown-mermaid.lightModeTheme": "default",
-    "markdownlint.config": {
-        "MD024": false,
-        "MD033": false,
-        "MD040": false,
-        "MD048": false
-    },
-    "markdown.extension.toc.levels": "2..3",
-    "myst.preview.extensions": [
-        "dollarmath",
-        "amsmath",
-        "colon_fence",
-        "deflist",
-        "tasklist"
-    ],
-    // vim --------------------------------------------------------------------
-    "vim.easymotion": true,
-    "vim.surround": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.visualstar": true,
-    "vim.easymotionKeys": "hklyuiopnm,qwertzxcvbasdgjf;",
-    "vim.leader": "<space>",
-    "vim.timeout": 1200,
-    "vim.sneak": false,
-    "vim.statusBarColorControl": false,
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "f",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.quickOpen"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f",
-                "g"
-            ],
-            "commands": [
-                "workbench.action.findInFiles",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "g"
-            ],
-            "commands": [
-                "workbench.view.scm",
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "r"
-            ],
-            "commands": [
-                "editor.action.rename"
-            ],
-            "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-        }
-    ],
-    "vim.handleKeys": {
-        "<C-n>": false,
-        "<C-b>": false
-    },
-    // C/C++ ------------------------------------------------------------------
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "C_Cpp.default.includePath": [
-        "${workspaceFolder}",
-        "${workspaceFolder}/include",
-        "/opt/homebrew/include",
-        "${env:HOME}/.venv/py311/lib/python3.11/site-packages/torch/include/torch/csrc/api/include"
-    ],
-    "C_Cpp.default.compilerPath": "/usr/bin/clang++",
-    "C_Cpp.default.cStandard": "c17",
-    "C_Cpp.default.cppStandard": "c++20",
-    "C_Cpp.default.intelliSenseMode": "macos-clang-arm64",
-    "doxdocgen.file.customTag": [
-        "@details"
-    ],
-    "doxdocgen.file.fileOrder": [
-        "file",
-        "brief",
-        "custom"
-    ],
-    "doxdocgen.generic.authorEmail": "shunya.sasaki1120@gmail.com",
-    "doxdocgen.generic.authorName": "Shunya Sasaki",
-    "cmake.cmakePath": "/opt/homebrew/bin/cmake",
-    "cmake.generator": "Ninja",
-    "cmake.configureSettings": {
-        "CMAKE_CXX_STANDARD": "20",
-        "CMAKE_MAKE_PROGRAM": "/opt/homebrew/bin/ninja",
-    },
-    "cmake.buildEnvironment": {
-        "CMAKE_PREFIX_PATH": "${env:HOME}/.opt/libtorch/share/cmake/Torch:$CMAKE_PREFIX_PATH",
-        "Torch_DIR": "${env:HOME}/.opt/libtorch/share/cmake/Torch",
-        "CMAKE_CXX_STANDARD": "20"
-    },
-    "cmake.environment": {
-        "CMAKE_PREFIX_PATH": "${env:HOME}/.venv/py311/lib/python3.11/site-packages/torch/share/cmake:$CMAKE_PREFIX_PATH",
-        "Torch_DIR": "${env:HOME}/.venv/py311/lib/python3.11/site-packages/torch/share/cmake/Torch"
-    },
-    "cmake.installPrefix": "${workspaceFolder}/install",
-    "cmake.configureOnOpen": true,
-    "cmake.pinnedCommands": [
-        "workbench.action.tasks.configureTaskRunner",
-        "workbench.action.tasks.runTask"
-    ],
-    // python -----------------------------------------------------------------
-    "python.terminal.activateEnvInCurrentTerminal": true,
-    "python.defaultInterpreterPath": "",
-    "python.languageServer": "Pylance",
-    "python.venvPath": "~/.venv, ./",
-    "jupyter.interactiveWindow.textEditor.executeSelection": true,
-    "jupyter.runStartupCommands": [
-        "%load ext autoreload\nautoreload 2"
-    ],
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "emmet.includeLanguages": {
-        "django-html": "html"
-    },
-    "typescript.preferences.importModuleSpecifier": "non-relative",
-    // file types =============================================================
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[django-html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": true,
-            "strings": true
-        }
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[markdown]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.quickSuggestions": {
-            "other": "on",
-            "comments": "on",
-            "strings": "on"
-        }
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[python]": {
-        "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.black-formatter",
-    },
-    "[dockercompose]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    },
-    "[cmake]": {},
-    "[mdx]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[dockerfile]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-    },
-    "[snippets]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
+    "prettier.tabWidth": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 2
+  },
+  "[snippets]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "prettier.tabWidth": 2
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "on",
+      "strings": "on"
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[dockercompose]": {
+    "editor.defaultFormatter": "docker.docker"
+  },
+  "[cmake]": {},
+  "[mdx]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dockerfile]": {
+    "editor.defaultFormatter": "docker.docker"
+  }
 }
