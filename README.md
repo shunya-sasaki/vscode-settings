@@ -8,18 +8,22 @@ In this project, I will store my VS Code settings.
 
 ## Setup
 
-### MacOSX
+### MacOS
 
 ```sh
-cd ~/Library/Application\ Support/Code/User
-git init
-git pull https://github.com/shunya-sasaki/vscode-settings.git
+git clone https://github.com/shunya-sasaki/vscode-settings.git ~/Library/Application\ Support/Code/User
 ```
 
 ### Windows
 
 ```ps1
 cd $Env:APPDATA\User
-git init
 git pull https://github.com/shunya-sasaki/vscode-settings.git
+```
+
+```mermaid
+flowchart TD
+  a --> b
+  test@{shape: rect, label: ""}
+  test2@{shape: rect, label: ""}
 ```

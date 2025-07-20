@@ -1,186 +1,247 @@
 // Place your key bindings in this file to override the defaults
 [
-    // Resize Pane keybindings ------------------------------------------------
-    {
-        "key": "alt+shift+k",
-        "command": "workbench.action.terminal.resizePaneUp",
-    },
-    {
-        "key": "alt+shift+j",
-        "command": "workbench.action.terminal.resizePaneDown",
-    },
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
-        "when": "editorFocus && !suggestWidgetVisible && !editorHoverFocused"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
-        "when": "editorFocus && !suggestWidgetVisible && !editorHoverFocused"
-    },
-    // Navigate to the next item in the quick open list
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.quickOpenNavigateNext",
-        "when": "inQuickOpen && !editorHoverVisible"
-    },
-    // Navigate to the previous item in the quick open list
-    {
-        "key": "ctrl+p",
-        "command": "workbench.action.quickOpenNavigatePrevious",
-        "when": "inQuickOpen && !editorHoverVisible"
-    },
-    // Invalidate the default keybinding for creating a new file
-    {
-        "key": "ctrl+n",
-        "command": "-workbench.action.files.newUntitledFile"
-    },
-    // Hover keybindings ------------------------------------------------------
-    {
-        "key": "Enter",
-        "command": "editor.action.showHover",
-        "when": "editorHoverVisible"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "editor.action.scrollDownHover",
-        "when": "editorHoverFocused"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "editor.action.scrollUpHover",
-        "when": "editorHoverFocused"
-    },
-    // Seach widget keybindings -----------------------------------------------
-    {
-        "key": "Enter",
-        "command": "search.action.focusSearchList",
-        "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "search.action.focusSearchList",
-        "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
-    },
-    {
-        "key": "ctrl+p",
-        "command": "search.action.focusSearchList",
-        "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
-    },
-    {
-        "key": "Escape",
-        "command": "workbench.action.closeSidebar",
-        "when": "activeViewlet == 'workbench.view.search' && inputFocus && !editorFocus"
-    },
-    {
-        "key": "Escape",
-        "command": "search.action.refreshSearchResults",
-        "when": "listFocus && activeViewlet == 'workbench.view.search'"
-    },
-    // Explorer ---------------------------------------------------------------
-    // create a new file in explorer
-    {
-        "key": "shift+n",
-        "command": "explorer.newFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    // create a new folder in explorer
-    {
-        "key": "shift+k",
-        "command": "explorer.newFolder",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "shift+d",
-        "command": "deleteFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    {
-        "key": "shift+r",
-        "command": "renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
-    },
-    // Source controll system -------------------------------------------------
-    {
-        "key": "Space",
-        "command": "git.stage",
-        "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
-    },
-    {
-        "key": "u",
-        "command": "git.unstage",
-        "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
-    },
-    {
-        "key": "escape",
-        "command": "workbench.scm.resetViewLocation",
-        "when": "workbench.scm.visible && sideBarFocus"
-    },
-    // Editor <-> Terminal keybindings ----------------------------------------
-    {
-        "key": "alt+j",
-        "command": "workbench.action.terminal.focus",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "alt+k",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "terminalFocus"
-    },
-    // Window tab keybindings -------------------------------------------------
-    // Change to the next window tab
-    {
-        "key": "ctrl+shift+n",
-        "command": "workbench.action.showNextWindowTab",
-        "when": "editorFocus && isMac"
-    },
-    // Change to the previous window tab
-    {
-        "key": "ctrl+shift+p",
-        "command": "workbench.action.showPreviousWindowTab",
-        "when": "editorFocus && isMac"
-    },
-    // Invalidate the default keybinding for moving the cursor down
-    {
-        "key": "ctrl+n",
-        "command": "-cursorDown",
-        "when": "isMac"
-    },
-    // Invalidate the default keybinding for moving the cursor up
-    {
-        "key": "ctrl+p",
-        "command": "-cursorUp",
-        "when": "isMac"
-    },
-    {
-        "key": "ctrl+b",
-        "command": "-markdown.extension.editing.toggleBold",
-        "when": "isWindows & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
-        "key": "cmd+b",
-        "command": "-markdown.extension.editing.toggleBold",
-        "when": "isMac & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
-        "key": "cmd+i",
-        "command": "-mdx.toggleEmphasis",
-        "when": "isMac && editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
-    },
-    {
-        "key": "cmd+b",
-        "command": "-mdx.toggleStrong",
-        "when": "isMac && editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
-    },
-    {
-        "key": "cmd+i",
-        "command": "-markdown.extension.editing.toggleItalic",
-        "when": "isMac & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "-workbench.action.switchWindow",
-        "when": "isMac"
-    }
+  // Resize Pane keybindings ------------------------------------------------
+  {
+    "key": "alt+shift+k",
+    "command": "workbench.action.terminal.resizePaneUp"
+  },
+  {
+    "key": "alt+shift+j",
+    "command": "workbench.action.terminal.resizePaneDown"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+    "when": "editorFocus && !suggestWidgetVisible && !editorHoverFocused"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
+    "when": "editorFocus && !suggestWidgetVisible && !editorHoverFocused"
+  },
+  // Navigate to the next item in the quick open list
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen && !editorHoverVisible"
+  },
+  // Navigate to the previous item in the quick open list
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen && !editorHoverVisible"
+  },
+  // Invalidate the default keybinding for creating a new file
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  // Hover keybindings ------------------------------------------------------
+  {
+    "key": "Enter",
+    "command": "editor.action.showHover",
+    "when": "editorHoverVisible"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  // SIdebar ----------------------------------------------------------------
+  {
+    "key": "q",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarVisible && !inputFocus && !editorFocus"
+  },
+  // Seach widget keybindings -----------------------------------------------
+  {
+    "key": "Enter",
+    "command": "search.action.focusSearchList",
+    "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "search.action.focusSearchList",
+    "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "search.action.focusSearchList",
+    "when": "activeViewlet == 'workbench.view.search' &&  inputFocus && !editorFocus"
+  },
+  {
+    "key": "Escape",
+    "command": "workbench.action.closeSidebar",
+    "when": "activeViewlet == 'workbench.view.search' && inputFocus && !editorFocus"
+  },
+  {
+    "key": "Escape",
+    "command": "search.action.refreshSearchResults",
+    "when": "listFocus && activeViewlet == 'workbench.view.search'"
+  },
+  // Explorer ---------------------------------------------------------------
+  // create a new file in explorer
+  {
+    "key": "shift+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // create a new folder in explorer
+  {
+    "key": "shift+k",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+d",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // Source controll system -------------------------------------------------
+  {
+    "key": "Space",
+    "command": "git.stage",
+    "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "a",
+    "command": "git.stageAll",
+    "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "l",
+    "command": "list.selectAndPreserveFocus",
+    "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "u",
+    "command": "git.unstage",
+    "when": "workbench.scm.visible && sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "Escape",
+    "command": "list.focusFirst",
+    "when": "!editorFocus && inputFocus && scmProvider && activeViewlet == 'workbench.view.scm'"
+  },
+  // Editor <-> Terminal keybindings ----------------------------------------
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.createTerminalEditor",
+    "when": "!terminalFocus && !sideBarFocus"
+  },
+  {
+    "key": "ctrl+a j",
+    "command": "workbench.action.focusBelowGroup",
+    "when": "terminalFocus || editorFocus|| activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+a k",
+    "command": "workbench.action.focusAboveGroup",
+    "when": "terminalFocus || editorFocus || activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+a h",
+    "command": "workbench.action.focusLeftGroup",
+    "when": "terminalFocus || editorFocus || activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+a l",
+    "command": "workbench.action.focusRightGroup",
+    "when": "terminalFocus || editorFocus || activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+a -",
+    "command": "workbench.action.splitEditorDown",
+    "when": "terminalFocus || editorFocus || activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+a shift+\\",
+    "command": "workbench.action.splitEditorRight",
+    "when": "terminalFocus || editorFocus || activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+a ]",
+    "command": "workbench.action.nextEditor",
+    "when": "terminalFocus || editorFocus || activeEditorGroupEmpty"
+  },
+  {
+    "key": "ctrl+a [",
+    "command": "workbench.action.previousEditor",
+    "when": "terminalFocus || editorFocus || activeEditorGroupEmpty"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  // Window tab keybindings -------------------------------------------------
+  // Change to the next window tab
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.showNextWindowTab",
+    "when": "editorFocus && isMac"
+  },
+  // Change to the previous window tab
+  {
+    "key": "ctrl+shift+p",
+    "command": "workbench.action.showPreviousWindowTab",
+    "when": "editorFocus && isMac"
+  },
+  // Invalidate the default keybinding for moving the cursor down
+  {
+    "key": "ctrl+n",
+    "command": "-cursorDown",
+    "when": "isMac"
+  },
+  // Invalidate the default keybinding for moving the cursor up
+  {
+    "key": "ctrl+p",
+    "command": "-cursorUp",
+    "when": "isMac"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "isWindows & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "isMac & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-mdx.toggleEmphasis",
+    "when": "isMac && editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-mdx.toggleStrong",
+    "when": "isMac && editorTextFocus && !editorReadonly && editorLangId == 'mdx'"
+  },
+  {
+    "key": "cmd+i",
+    "command": "-markdown.extension.editing.toggleItalic",
+    "when": "isMac & editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow",
+    "when": "isMac"
+  }
 ]
