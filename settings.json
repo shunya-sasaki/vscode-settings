@@ -108,6 +108,10 @@
       "commands": ["workbench.view.scm"]
     },
     {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
       "before": ["g", "r"],
       "commands": ["editor.action.rename"],
       "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
