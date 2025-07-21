@@ -20,10 +20,3 @@ git clone https://github.com/shunya-sasaki/vscode-settings.git ~/Library/Applica
 cd $Env:APPDATA\User
 git pull https://github.com/shunya-sasaki/vscode-settings.git
 ```
-
-```mermaid
-flowchart TD
-  a --> b
-  test@{shape: rect, label: ""}
-  test2@{shape: rect, label: ""}
-```
