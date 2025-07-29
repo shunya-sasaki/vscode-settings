@@ -1,5 +1,5 @@
 {
-  "app_config": {
+  "AppConfig": {
     "prefix": "py-app-config",
     "scope": "python",
     "description": "Application configuration model.",
