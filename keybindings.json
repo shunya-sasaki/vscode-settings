@@ -10,6 +10,15 @@
 		"command": "workbench.action.terminal.resizePaneDown"
 	},
 	{
+		"key": "ctrl+a a l",
+		"command": "workbench.action.increaseViewWidth"
+	},
+	{
+		"key": "ctrl+a a h",
+		"command": "workbench.action.decreaseViewWidth"
+	},
+	// Move pane
+	{
 		"key": "ctrl+n",
 		"command": "workbench.action.quickOpenPreviousRecentlyUsedEditor",
 		"when": "editorFocus && !suggestWidgetVisible && !editorHoverFocused"
@@ -95,6 +104,11 @@
 	{
 		"key": "shift+a",
 		"command": "explorer.newFolder",
+		"when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "r",
+		"command": "renameFile",
 		"when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
 	},
 	{
